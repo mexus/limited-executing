@@ -8,7 +8,7 @@ PoolRealisation::PoolRealisation() {
 PoolRealisation::~PoolRealisation() {
 }
 
-bool PoolRealisation::SingleThreadLoadTasks() {
+bool PoolRealisation::PopulateTasks() {
         S_LOG("LoadTasks");
         auto server1 = std::make_shared<Server>(1, 2);
         auto server2 = std::make_shared<Server>(2, 1);

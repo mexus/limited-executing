@@ -8,7 +8,7 @@ public:
         PoolRealisation();
         virtual ~PoolRealisation();
 
-        virtual bool SingleThreadLoadTasks();
+        virtual bool PopulateTasks();
 
 protected:
         static logxx::Log cLog;

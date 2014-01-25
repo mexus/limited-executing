@@ -19,7 +19,7 @@ protected:
         std::vector<uniqueTask> scheduledTasks;
         std::mutex dataLock;
         
-        virtual bool SingleThreadLoadTasks() = 0;
+        virtual bool PopulateTasks() = 0;
 };
 
 #endif	/* TASKS_POOL_H */

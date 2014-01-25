@@ -28,7 +28,7 @@ uniqueTask TasksPool::GetTask() {
 
 bool TasksPool::LoadTasks() {
         std::lock_guard<std::mutex> lg(dataLock);
-        return SingleThreadLoadTasks();
+        return PopulateTasks();
 }
 
 bool TasksPool::IsEmpty() {
