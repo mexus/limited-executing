@@ -4,8 +4,7 @@ configure_file (
 	"${CMAKE_CURRENT_BINARY_DIR}/config.h"
 )
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread -O0 -g")
 
 add_executable(limited-executing-test 
         main.cpp
