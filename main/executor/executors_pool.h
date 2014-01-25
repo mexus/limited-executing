@@ -6,9 +6,11 @@
 
 class ExecutorsPool {
 public:
-        template<class ExecutorT>
-        ExecutorsPool(int executors);
+        ExecutorsPool();
         virtual ~ExecutorsPool();
+        
+        template<class ExecutorT>
+        bool CreateExecutors(size_t count);
         
         void SetTasksPool(TasksPool &);
         bool LaunchExecutors();

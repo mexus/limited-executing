@@ -2,6 +2,9 @@
 
 logxx::Log ExecutorsPool::cLog("ExecutorsPool");
 
+ExecutorsPool::ExecutorsPool() {
+}
+
 ExecutorsPool::~ExecutorsPool() {
 }
 
@@ -36,10 +39,8 @@ bool ExecutorsPool::LaunchExecutors() {
 void ExecutorsPool::Interrupt(bool andJoin) {
         for (ExecutorPtr &e : executors)
                 e->Interrupt();
-        if (andJoin){
-                for (ExecutorPtr &e : executors)
-                        e->Join();
-        }
+        if (andJoin)
+                WaitForExecutors();
 }
 
 void ExecutorsPool::WaitForExecutors() {
