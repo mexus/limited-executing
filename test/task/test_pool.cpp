@@ -5,7 +5,7 @@
  * Created on January 24, 2014, 12:50 PM
  */
 
-#include "TestPool.h"
+#include "test_pool.h"
 #include <atomic>
 #include <thread>
 #include "primitive_executor.h"

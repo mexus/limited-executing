@@ -9,7 +9,7 @@
 #define	TESTPOOL_H
 
 #include "../../main/logxx/logxx.h"
-#include "PoolRealisation.h"
+#include "pool_realisation.h"
 
 class TestPool {
 public:

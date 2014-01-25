@@ -1,7 +1,7 @@
 #include "../main/logxx/logxx.h"
-#include "server/TestServer.h"
-#include "task/TestTask.h"
-#include "task/TestPool.h"
+#include "server/test_server.h"
+#include "task/test_task.h"
+#include "task/test_pool.h"
 #include <map>
 
 int main() {

@@ -5,7 +5,7 @@
  * Created on January 24, 2014, 2:47 PM
  */
 
-#include "PoolRealisation.h"
+#include "pool_realisation.h"
 
 logxx::Log PoolRealisation::cLog(TasksPool::cLog, "PoolRealisation");
 

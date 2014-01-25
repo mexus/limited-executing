@@ -18,10 +18,10 @@ add_executable(limited-executing-test
         ../main/task/tasks_pool.cpp
         ../main/threadxx/threadxx.cpp
 
-        server/TestServer.cpp
-        task/TestTask.cpp
-        task/TestPool.cpp
-        task/PoolRealisation.cpp
+        server/test_server.cpp
+        task/test_task.cpp
+        task/test_pool.cpp
+        task/pool_realisation.cpp
         task/primitive_executor.cpp
 
 )

@@ -5,7 +5,7 @@
  * Created on January 24, 2014, 12:13 PM
  */
 
-#include "TestServer.h"
+#include "test_server.h"
 
 logxx::Log TestServer::cLog("TestServer");
 
