@@ -5,7 +5,7 @@ logxx::Log ExecutorsPool::cLog("ExecutorsPool");
 ExecutorsPool::~ExecutorsPool() {
 }
 
-void ExecutorsPool::SetTasksPool(TasksPool* p) {
+void ExecutorsPool::SetTasksPool(TasksPool& p) {
         for (ExecutorPtr &e : executors){
                 e->SetTasksPool(p);
         }

@@ -10,7 +10,7 @@ public:
         Executor(int id);
         virtual ~Executor();
         
-        void SetTasksPool(TasksPool *);
+        void SetTasksPool(TasksPool &);
 protected:
 // cppcheck-suppress duplInheritedMember
         logxx::Log cLog; 

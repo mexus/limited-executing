@@ -10,8 +10,8 @@ Executor::Executor(int id) : Thread(id), cLog("Executor #" + std::to_string(id))
 Executor::~Executor() {
 }
 
-void Executor::SetTasksPool(TasksPool* p) {
-        tasksPool = p;
+void Executor::SetTasksPool(TasksPool& p) {
+        tasksPool = &p;
 }
 
 void Executor::Run() {

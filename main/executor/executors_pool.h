@@ -10,7 +10,7 @@ public:
         ExecutorsPool(int executors);
         virtual ~ExecutorsPool();
         
-        void SetTasksPool(TasksPool *);
+        void SetTasksPool(TasksPool &);
         bool LaunchExecutors();
         void Interrupt(bool andJoin = false);
         void WaitForExecutors();
