@@ -12,8 +12,8 @@ int main() {
         log(logxx::info) << "Starting tests" << logxx::endl;
         std::map<std::string, bool> tests {
                 {"server", false},
-                {"tast", false},
-                {"pool", true}
+                {"task", false},
+                {"tasks_pool", true}
         };
         
         if (tests["server"]){
@@ -21,12 +21,12 @@ int main() {
                 res &= testServer.RunTests();
         }
         
-        if (tests["tast"]){
+        if (tests["task"]){
                 TestTask testTask;
                 res &= testTask.RunTests();
         }
         
-        if (tests["pool"]){
+        if (tests["tasks_pool"]){
                 TestPool testPool;
                 res &= testPool.RunTests();
         }
