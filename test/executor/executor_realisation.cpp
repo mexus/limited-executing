@@ -1,6 +1,6 @@
 #include "executor_realisation.h"
 
-ExecutorRealisation::ExecutorRealisation(int id) : Executor(id), cLog("ExecutorRealisation") {
+ExecutorRealisation::ExecutorRealisation(int id) : Executor(id), cLog(Executor::cLog, "ExecutorRealisation") {
 }
 
 ExecutorRealisation::~ExecutorRealisation() {

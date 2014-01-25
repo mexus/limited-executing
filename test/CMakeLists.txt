@@ -25,5 +25,6 @@ add_executable(limited-executing-test
 
         executor/executor_realisation.cpp
         executor/test_executor.cpp
+        executor/test_pool.cpp
 
 )
