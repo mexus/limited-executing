@@ -24,10 +24,7 @@ bool TestExecutor::RunTests() {
         
         ExecutorRealisation ex(0);
         auto t2 = std::thread([this, &ex]{
-                std::this_thread::sleep_for(std::chrono::seconds(80));
-                while (!tasksPool.IsEmpty())
-                        std::this_thread::sleep_for(std::chrono::seconds(1));
-                std::this_thread::sleep_for(std::chrono::seconds(5));
+                std::this_thread::sleep_for(std::chrono::seconds(85));
                 log(logxx::info) << "Interrupting executor" << logxx::endl;
                 ex.Interrupt();
         });
