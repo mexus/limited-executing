@@ -1,10 +1,3 @@
-/* 
- * File:   TestServer.h
- * Author: mexus
- *
- * Created on January 24, 2014, 12:13 PM
- */
-
 #ifndef TESTSERVER_H
 #define	TESTSERVER_H
 

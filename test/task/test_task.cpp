@@ -1,10 +1,3 @@
-/* 
- * File:   TestTask.cpp
- * Author: mexus
- * 
- * Created on January 24, 2014, 12:28 PM
- */
-
 #include "test_task.h"
 
 logxx::Log TestTask::cLog("TestTask");

@@ -1,10 +1,3 @@
-/* 
- * File:   TestTask.h
- * Author: mexus
- *
- * Created on January 24, 2014, 12:28 PM
- */
-
 #ifndef TESTTASK_H
 #define	TESTTASK_H
 

@@ -1,10 +1,3 @@
-/* 
- * File:   TestPool.h
- * Author: mexus
- *
- * Created on January 24, 2014, 12:50 PM
- */
-
 #ifndef TESTPOOL_H
 #define	TESTPOOL_H
 

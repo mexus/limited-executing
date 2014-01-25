@@ -1,10 +1,3 @@
-/* 
- * File:   TestPool.cpp
- * Author: mexus
- * 
- * Created on January 24, 2014, 12:50 PM
- */
-
 #include "test_pool.h"
 #include <atomic>
 #include <thread>

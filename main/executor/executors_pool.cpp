@@ -1,10 +1,3 @@
-/* 
- * File:   executors_pool.cpp
- * Author: mexus
- * 
- * Created on January 20, 2014, 3:48 PM
- */
-
 #include "executors_pool.h"
 
 logxx::Log ExecutorsPool::cLog("ExecutorsPool");

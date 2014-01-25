@@ -1,10 +1,3 @@
-/* 
- * File:   tasks_pool.h
- * Author: mexus
- *
- * Created on January 20, 2014, 11:30 AM
- */
-
 #ifndef TASKS_POOL_H
 #define	TASKS_POOL_H
 

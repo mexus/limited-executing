@@ -1,10 +1,3 @@
-/* 
- * File:   executor.cpp
- * Author: mexus
- * 
- * Created on January 20, 2014, 10:54 AM
- */
-
 #include "executor.h"
 #include <chrono>
 

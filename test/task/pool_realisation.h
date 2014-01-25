@@ -1,10 +1,3 @@
-/* 
- * File:   PoolRealisation.h
- * Author: mexus
- *
- * Created on January 24, 2014, 2:47 PM
- */
-
 #ifndef POOLREALISATION_H
 #define	POOLREALISATION_H
 

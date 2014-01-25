@@ -1,10 +1,3 @@
-/* 
- * File:   server.h
- * Author: mexus
- *
- * Created on January 20, 2014, 10:16 AM
- */
-
 #ifndef SERVER_H
 #define	SERVER_H
 

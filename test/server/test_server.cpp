@@ -1,10 +1,3 @@
-/* 
- * File:   TestServer.cpp
- * Author: mexus
- * 
- * Created on January 24, 2014, 12:13 PM
- */
-
 #include "test_server.h"
 
 logxx::Log TestServer::cLog("TestServer");

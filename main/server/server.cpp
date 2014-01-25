@@ -1,10 +1,3 @@
-/* 
- * File:   server.cpp
- * Author: mexus
- * 
- * Created on January 20, 2014, 10:16 AM
- */
-
 #include "server.h"
 
 Server::Server(int id, int limit) : id(id), limit(limit), inUse(0), cLog("Server #" + std::to_string(id)) {

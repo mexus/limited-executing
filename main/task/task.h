@@ -1,10 +1,3 @@
-/* 
- * File:   task.h
- * Author: mexus
- *
- * Created on January 20, 2014, 10:38 AM
- */
-
 #ifndef TASK_H
 #define	TASK_H
 

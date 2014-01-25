@@ -1,10 +1,3 @@
-/* 
- * File:   task.cpp
- * Author: mexus
- * 
- * Created on January 20, 2014, 10:38 AM
- */
-
 #include "task.h"
 
 Task::Task(int id, const std::shared_ptr<Server>& s) : id(id), server(s), cLog("Task #" + std::to_string(id)) {
