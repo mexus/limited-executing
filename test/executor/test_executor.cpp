@@ -22,14 +22,13 @@ bool TestExecutor::RunTests() {
                 tasksPool.LoadTasks();
         });
         
-        ExecutorRealisation ex(0);
+        ExecutorRealisation ex(0, tasksPool);
         auto t2 = std::thread([this, &ex]{
                 std::this_thread::sleep_for(std::chrono::seconds(85));
                 log(logxx::info) << "Interrupting executor" << logxx::endl;
                 ex.Interrupt();
         });
         
-        ex.SetTasksPool(tasksPool);
         ex.Start();
         ex.Join();
         t1.join();

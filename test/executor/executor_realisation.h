@@ -5,7 +5,7 @@
 
 class ExecutorRealisation : public Executor {
 public:
-        ExecutorRealisation(int id);
+        ExecutorRealisation(int id, TasksPool &);
         virtual ~ExecutorRealisation();
         
 protected:

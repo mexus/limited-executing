@@ -7,14 +7,12 @@
 
 class Executor : public Thread {
 public:
-        Executor(int id);
+        Executor(int id, TasksPool &);
         virtual ~Executor();
-        
-        void SetTasksPool(TasksPool &);
 protected:
 // cppcheck-suppress duplInheritedMember
         logxx::Log cLog; 
-        TasksPool *tasksPool = nullptr;
+        TasksPool& tasksPool;
         static const std::time_t waitOnNullTask = 15;
         static const std::time_t waitOnEndTask = 2;
 

@@ -4,38 +4,31 @@
 const std::time_t Executor::waitOnNullTask;
 const std::time_t Executor::waitOnEndTask;
 
-Executor::Executor(int id) : Thread(id), cLog("Executor #" + std::to_string(id)) {
+Executor::Executor(int id, TasksPool &tasksPool) : Thread(id), cLog("Executor #" + std::to_string(id)), tasksPool(tasksPool) {
 }
 
 Executor::~Executor() {
 }
 
-void Executor::SetTasksPool(TasksPool& p) {
-        tasksPool = &p;
-}
-
 void Executor::Run() {
         Thread::Run();
         D_LOG("Run");
-        if (tasksPool){
-                while (!interrupted){
-                        auto task = tasksPool->GetTask();
-                        if (task){
-                                // cppcheck-suppress constStatement
-                                log(logxx::notice) << "Starting task #" << task->id << logxx::endl; 
-                                bool res = RunTask(task);
-                                auto &s = log(logxx::notice) << "Task #" << task->id << " ";
-                                if (res)
-                                        s << "successfully done";
-                                else
-                                        s << "failed";
-                                s << logxx::endl;
-                                std::this_thread::sleep_for(std::chrono::seconds(waitOnEndTask));
-                        } else
-                                std::this_thread::sleep_for(std::chrono::seconds(waitOnNullTask));
-                }
-        } else
-                log(logxx::error) << "No tasks pool provided" << logxx::endl;
+        while (!interrupted){
+                auto task = tasksPool.GetTask();
+                if (task){
+                        // cppcheck-suppress constStatement
+                        log(logxx::notice) << "Starting task #" << task->id << logxx::endl; 
+                        bool res = RunTask(task);
+                        auto &s = log(logxx::notice) << "Task #" << task->id << " ";
+                        if (res)
+                                s << "successfully done";
+                        else
+                                s << "failed";
+                        s << logxx::endl;
+                        std::this_thread::sleep_for(std::chrono::seconds(waitOnEndTask));
+                } else
+                        std::this_thread::sleep_for(std::chrono::seconds(waitOnNullTask));
+        }
 }
 
 

@@ -5,13 +5,12 @@
 
 #include <type_traits>
 
-template<class ExecutorT>
-bool ExecutorsPool::CreateExecutors(size_t count, TasksPool & pool){
+template<class ExecutorT, class ...Args>
+bool ExecutorsPool::CreateExecutors(size_t count, TasksPool & pool, Args&& ...args){
         static_assert(std::is_base_of<Executor, ExecutorT>::value, "ExecutorT should be derived from an Executor");
         if (executors.empty()){
                 for (int i = 0; i < count; ++i){
-                        ExecutorPtr executor(new ExecutorT(i));
-                        executor->SetTasksPool(pool);
+                        ExecutorPtr executor(new ExecutorT(i, pool, args...));
                         executors.push_back(std::move(executor));
                 }
                 return true;

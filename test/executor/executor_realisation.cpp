@@ -1,6 +1,6 @@
 #include "executor_realisation.h"
 
-ExecutorRealisation::ExecutorRealisation(int id) : Executor(id), cLog(Executor::cLog, "ExecutorRealisation") {
+ExecutorRealisation::ExecutorRealisation(int id, TasksPool & pool) : Executor(id, pool), cLog(Executor::cLog, "ExecutorRealisation") {
 }
 
 ExecutorRealisation::~ExecutorRealisation() {
