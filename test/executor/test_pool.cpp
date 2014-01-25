@@ -17,19 +17,19 @@ bool TestExecutorsPool::RunTests() {
                 return false;
         }
         ExecutorsPool executorsPool;
-        if (!executorsPool.CreateExecutors<ExecutorRealisation>(3)){
+        if (!executorsPool.CreateExecutors<ExecutorRealisation>(3, tasksPool)){
                 log(logxx::error) << "Can't create executors" << logxx::endl;
                 return false;
         }
         
         try {
-                executorsPool.CreateExecutors<ExecutorRealisation>(10);
+                executorsPool.CreateExecutors<ExecutorRealisation>(10, tasksPool);
                 log(logxx::error) << "An exception should be raised" << logxx::endl;
                 return false;
         } catch (const std::logic_error& e){
                 log(logxx::info) << "Catched an exception: " << e.what() << logxx::endl;
         }
-        executorsPool.SetTasksPool(tasksPool);
+        
         if (!executorsPool.LaunchExecutors()){
                 log(logxx::error) << "Can't launch executors" << logxx::endl;
                 return false;

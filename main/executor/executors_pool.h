@@ -10,9 +10,8 @@ public:
         virtual ~ExecutorsPool();
         
         template<class ExecutorT>
-        bool CreateExecutors(size_t count);
+        bool CreateExecutors(size_t count, TasksPool &);
         
-        void SetTasksPool(TasksPool &);
         bool LaunchExecutors();
         void Interrupt(bool andJoin = false);
         void WaitForExecutors();

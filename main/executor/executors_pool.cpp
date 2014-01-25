@@ -8,12 +8,6 @@ ExecutorsPool::ExecutorsPool() {
 ExecutorsPool::~ExecutorsPool() {
 }
 
-void ExecutorsPool::SetTasksPool(TasksPool& p) {
-        for (ExecutorPtr &e : executors){
-                e->SetTasksPool(p);
-        }
-}
-
 bool ExecutorsPool::LaunchExecutors() {
         S_LOG("LaunchExecutors");
         auto begin = executors.begin();

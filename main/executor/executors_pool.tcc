@@ -6,11 +6,14 @@
 #include <type_traits>
 
 template<class ExecutorT>
-bool ExecutorsPool::CreateExecutors(size_t count){
+bool ExecutorsPool::CreateExecutors(size_t count, TasksPool & pool){
         static_assert(std::is_base_of<Executor, ExecutorT>::value, "ExecutorT should be derived from an Executor");
         if (executors.empty()){
-                for (int i = 0; i < count; ++i)
-                        executors.emplace_back(new ExecutorT(i));
+                for (int i = 0; i < count; ++i){
+                        ExecutorPtr executor(new ExecutorT(i));
+                        executor->SetTasksPool(pool);
+                        executors.push_back(std::move(executor));
+                }
                 return true;
         } else
                 throw std::logic_error("Can't create executors because they already exists");
