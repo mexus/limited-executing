@@ -24,4 +24,7 @@ add_executable(limited-executing-test
         task/pool_realisation.cpp
         task/primitive_executor.cpp
 
+        executor/executor_realisation.cpp
+        executor/test_executor.cpp
+
 )

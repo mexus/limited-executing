@@ -2,6 +2,7 @@
 #include "server/test_server.h"
 #include "task/test_task.h"
 #include "task/test_pool.h"
+#include "executor/test_executor.h"
 #include <map>
 
 int main() {
@@ -13,7 +14,8 @@ int main() {
         std::map<std::string, bool> tests {
                 {"server", false},
                 {"task", false},
-                {"tasks_pool", true}
+                {"tasks_pool", false},
+                {"executor", true}
         };
         
         if (tests["server"]){
@@ -29,6 +31,11 @@ int main() {
         if (tests["tasks_pool"]){
                 TestPool testPool;
                 res &= testPool.RunTests();
+        }
+        
+        if (tests["executor"]){
+                TestExecutor testExecutor;
+                res &= testExecutor.RunTests();
         }
         
         auto &s = log(logxx::info) << "Tests ";
