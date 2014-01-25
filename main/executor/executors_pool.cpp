@@ -28,6 +28,7 @@ bool ExecutorsPool::LaunchExecutors() {
                         return false;
                 }
         }
+	// cppcheck-suppress constStatement
         log(logxx::notice) << "Launched " << executors.size() << " executors" << logxx::endl;
         return true;
 }
