@@ -19,7 +19,7 @@ protected:
         static const std::time_t waitOnEndTask = 2;
 
         virtual void Run();
-        virtual bool RunTask(uniqueTask &) = 0;
+        virtual bool RunTask(const uniqueTask &) = 0;
 };
 
 #endif	/* EXECUTOR_H */
