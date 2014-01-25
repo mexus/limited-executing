@@ -15,6 +15,7 @@ void Executor::SetTasksPool(TasksPool& p) {
 }
 
 void Executor::Run() {
+        Thread::Run();
         D_LOG("Run");
         while (!interrupted){
                 auto task = tasksPool->GetTask();
