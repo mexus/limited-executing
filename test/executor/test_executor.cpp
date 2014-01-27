@@ -10,7 +10,7 @@ TestExecutor::~TestExecutor() {
 
 bool TestExecutor::RunTests() {
         S_LOG("RunTests");
-        logxx::SetLogLevel(logxx::notice);
+        logxx::GlobalLogLevel(logxx::notice);
         if (!tasksPool.LoadTasks()){
                 log(logxx::error) << "Can't load tasks pool" << logxx::endl;
                 return false;

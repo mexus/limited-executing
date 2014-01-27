@@ -8,7 +8,7 @@
 #include <map>
 
 int main() {
-        logxx::SetLogLevel(logxx::warning);
+        logxx::GlobalLogLevel(logxx::warning);
         bool res(true);
         logxx::Log log("main");
         
