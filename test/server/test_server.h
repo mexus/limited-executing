@@ -1,17 +1,18 @@
 #ifndef TESTSERVER_H
 #define	TESTSERVER_H
 
+#include "../test_fw.h"
 #include "../../main/server/server.h"
 
-class TestServer {
+class TestServer : public TestFW {
 public:
         TestServer();
         virtual ~TestServer();
         
-        bool RunTests();
 private:
-        
         static logxx::Log cLog;
+
+        virtual bool Tests();
 
 };
 

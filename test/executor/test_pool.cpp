@@ -2,13 +2,13 @@
 
 logxx::Log TestExecutorsPool::cLog("TestExecutorsPool");
 
-TestExecutorsPool::TestExecutorsPool() {
+TestExecutorsPool::TestExecutorsPool() : TestFW("executors-pool") {
 }
 
 TestExecutorsPool::~TestExecutorsPool() {
 }
 
-bool TestExecutorsPool::RunTests() {
+bool TestExecutorsPool::Tests() {
         S_LOG("RunTests");
         
         PoolRealisation tasksPool;

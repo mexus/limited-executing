@@ -2,21 +2,21 @@
 
 logxx::Log TestExecutor::cLog("TestExecutor");
 
-TestExecutor::TestExecutor() {
+TestExecutor::TestExecutor() : TestFW("executor", logxx::notice) {
 }
 
 TestExecutor::~TestExecutor() {
 }
 
-bool TestExecutor::RunTests() {
+bool TestExecutor::Tests() {
         S_LOG("RunTests");
-        logxx::GlobalLogLevel(logxx::notice);
+        PoolRealisation tasksPool;
         if (!tasksPool.LoadTasks()){
                 log(logxx::error) << "Can't load tasks pool" << logxx::endl;
                 return false;
         }
         
-        auto t1 = std::thread([this]{
+        auto t1 = std::thread([this, &tasksPool]{
                 std::this_thread::sleep_for(std::chrono::seconds(40));
                 log(logxx::info) << "Populating pool again" << logxx::endl;
                 tasksPool.LoadTasks();

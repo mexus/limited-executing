@@ -2,15 +2,14 @@
 
 logxx::Log TestServer::cLog("TestServer");
 
-TestServer::TestServer() {
+TestServer::TestServer() : TestFW("server"){
 }
 
 TestServer::~TestServer() {
 }
 
-bool TestServer::RunTests() {
+bool TestServer::Tests() {
         S_LOG("RunTests");
-        log(logxx::info) << "Running tests" << logxx::endl;
         int limit(10);
         Server s(1, limit);
         for (int i = 0; i < limit; ++i){

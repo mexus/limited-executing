@@ -17,6 +17,8 @@ add_executable(limited-executing-test
         ../main/task/tasks_pool.cpp
         ../main/threadxx/threadxx.cpp
 
+        test_fw.cpp
+
         server/test_server.cpp
         task/test_task.cpp
         task/test_pool.cpp

@@ -1,20 +1,22 @@
 #ifndef TESTPOOL_H
 #define	TESTPOOL_H
 
+#include "../test_fw.h"
 #include "../../main/logxx/logxx.h"
 #include "pool_realisation.h"
 
-class TestPool {
+class TestPool : public TestFW {
 public:
         TestPool();
         virtual ~TestPool();
         
-        bool RunTests();
 private:
         static logxx::Log cLog;
         
         PoolRealisation pool;
-        
+
+        virtual bool Tests();
+
         bool LoadTasks();
         bool RunTasks();
         

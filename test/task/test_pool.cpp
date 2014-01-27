@@ -5,7 +5,7 @@
 
 logxx::Log TestPool::cLog("TestPool");
 
-TestPool::TestPool() {
+TestPool::TestPool() : TestFW("pool") {
 }
 
 TestPool::~TestPool() {
@@ -74,10 +74,8 @@ bool TestPool::RunTasks() {
         }
 }
 
-bool TestPool::RunTests() {
+bool TestPool::Tests() {
         S_LOG("RunTests");
-        log(logxx::info) << "Running tests" << logxx::endl;
         
-        //return LoadTasks() ;//&& RunTasks();
         return LoadTasks() && RunTasks();
 }

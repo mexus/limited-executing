@@ -1,16 +1,18 @@
 #ifndef TESTTASK_H
 #define	TESTTASK_H
 
+#include "../test_fw.h"
 #include "../../main/task/task.h"
 
-class TestTask {
+class TestTask : public TestFW {
 public:
         TestTask();
         virtual ~TestTask();
         
-        bool RunTests();
 private:
         static logxx::Log cLog;
+
+        virtual bool Tests();
 
 };
 

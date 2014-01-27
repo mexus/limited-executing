@@ -2,15 +2,14 @@
 
 logxx::Log TestTask::cLog("TestTask");
 
-TestTask::TestTask() {
+TestTask::TestTask() : TestFW("task") {
 }
 
 TestTask::~TestTask() {
 }
 
-bool TestTask::RunTests() {
+bool TestTask::Tests() {
         S_LOG("RunTests");
-        log(logxx::info) << "Running tests" << logxx::endl;
         
         std::shared_ptr<Server> s1(new Server(2, 1));
         std::shared_ptr<Task> t1(new Task(1, s1));
