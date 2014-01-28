@@ -19,12 +19,12 @@ void Executor::Run() {
                         // cppcheck-suppress constStatement
                         log(logxx::notice) << "Starting task #" << task->id << logxx::endl; 
                         bool res = RunTask(task);
-                        auto &s = log(logxx::notice) << "Task #" << task->id << " ";
-                        if (res)
-                                s << "successfully done";
-                        else
-                                s << "failed";
-                        s << logxx::endl;
+//                        auto &s = log(logxx::notice) << "Task #" << task->id << " ";
+//                        if (res)
+//                                s << "successfully done";
+//                        else
+//                                s << "failed";
+//                        s << logxx::endl;
                         std::this_thread::sleep_for(std::chrono::seconds(waitOnEndTask));
                 } else
                         std::this_thread::sleep_for(std::chrono::seconds(waitOnNullTask));
