@@ -1,5 +1,7 @@
 #include "pool_realisation.h"
 
+using namespace lim_exec;
+
 logxx::Log PoolRealisation::cLog(TasksPool::cLog, "PoolRealisation");
 
 PoolRealisation::PoolRealisation() {

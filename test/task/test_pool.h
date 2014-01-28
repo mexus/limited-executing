@@ -20,7 +20,7 @@ private:
         bool LoadTasks();
         bool RunTasks();
         
-        static void ExecuteTask(uniqueTask &&task);
+        static void ExecuteTask(lim_exec::uniqueTask &&task);
         
 };
 

@@ -3,21 +3,24 @@
 
 #include "../server/server.h"
 
-class Task {
-public:
-        Task(int id, const std::shared_ptr<Server> &);
-        virtual ~Task();
-        
-        bool TryOccupyServer();
-        
-        const int id;
-protected:
-        bool serverOccupied = false;
-        std::shared_ptr<Server> server;
-        logxx::Log cLog;
-};
+namespace lim_exec {
 
-typedef std::unique_ptr<Task> uniqueTask;
+        class Task {
+        public:
+                Task(int id, const std::shared_ptr<Server> &);
+                virtual ~Task();
+
+                bool TryOccupyServer();
+
+                const int id;
+        protected:
+                bool serverOccupied = false;
+                std::shared_ptr<Server> server;
+                logxx::Log cLog;
+        };
+
+        typedef std::unique_ptr<Task> uniqueTask;
+        
+} //namespace lim_exec
 
 #endif	/* TASK_H */
-

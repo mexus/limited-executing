@@ -1,5 +1,7 @@
 #include "test_pool.h"
 
+using namespace lim_exec;
+
 logxx::Log TestExecutorsPool::cLog("TestExecutorsPool");
 
 TestExecutorsPool::TestExecutorsPool() : TestFW("executors-pool") {

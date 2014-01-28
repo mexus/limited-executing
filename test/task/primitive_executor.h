@@ -6,13 +6,13 @@
 
 class PrimitiveExecutor : public Thread {
 public:
-        PrimitiveExecutor(uniqueTask &&task);
+        PrimitiveExecutor(lim_exec::uniqueTask &&task);
         virtual ~PrimitiveExecutor();
 protected:
         virtual void Run();
         logxx::Log cLog;
 private:
-        uniqueTask task;
+        lim_exec::uniqueTask task;
 
 };
 

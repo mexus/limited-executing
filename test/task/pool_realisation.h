@@ -3,7 +3,7 @@
 
 #include "../../main/task/tasks_pool.h"
 
-class PoolRealisation : public TasksPool {
+class PoolRealisation : public lim_exec::TasksPool {
 public:
         PoolRealisation();
         virtual ~PoolRealisation();

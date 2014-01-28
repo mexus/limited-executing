@@ -5,20 +5,23 @@
 #include "../task/tasks_pool.h"
 #include "../threadxx/threadxx.h"
 
-class Executor : public Thread {
-public:
-        Executor(int id, TasksPool &);
-        virtual ~Executor();
-protected:
-// cppcheck-suppress duplInheritedMember
-        logxx::Log cLog; 
-        TasksPool& tasksPool;
-        static const std::time_t waitOnNullTask = 15;
-        static const std::time_t waitOnEndTask = 2;
+namespace lim_exec {
 
-        virtual void Run();
-        virtual bool RunTask(const uniqueTask &) = 0;
-};
+        class Executor : public Thread {
+        public:
+                Executor(int id, TasksPool &);
+                virtual ~Executor();
+        protected:
+        // cppcheck-suppress duplInheritedMember
+                logxx::Log cLog; 
+                TasksPool& tasksPool;
+                static const std::time_t waitOnNullTask = 15;
+                static const std::time_t waitOnEndTask = 2;
+
+                virtual void Run();
+                virtual bool RunTask(const uniqueTask &) = 0;
+        };
+} //namespace lim_exec
 
 #endif	/* EXECUTOR_H */
 

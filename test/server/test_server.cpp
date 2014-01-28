@@ -1,5 +1,7 @@
 #include "test_server.h"
 
+using namespace lim_exec;
+
 logxx::Log TestServer::cLog("TestServer");
 
 TestServer::TestServer() : TestFW("server"){

@@ -1,5 +1,7 @@
 #include "test_executor.h"
 
+using namespace lim_exec;
+
 logxx::Log TestExecutor::cLog("TestExecutor");
 
 TestExecutor::TestExecutor() : TestFW("executor", logxx::notice) {

@@ -1,5 +1,7 @@
 #include "test_task.h"
 
+using namespace lim_exec;
+
 logxx::Log TestTask::cLog("TestTask");
 
 TestTask::TestTask() : TestFW("task") {

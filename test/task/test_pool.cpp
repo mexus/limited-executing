@@ -3,6 +3,8 @@
 #include <thread>
 #include "primitive_executor.h"
 
+using namespace lim_exec;
+
 logxx::Log TestPool::cLog("TestPool");
 
 TestPool::TestPool() : TestFW("pool") {

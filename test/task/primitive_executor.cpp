@@ -1,5 +1,7 @@
 #include "primitive_executor.h"
 
+using namespace lim_exec;
+
 PrimitiveExecutor::PrimitiveExecutor(uniqueTask&& task) : Thread(task->id), cLog(Thread::cLog, "PrimitiveExecutor"), task(std::move(task)) {
 }
 

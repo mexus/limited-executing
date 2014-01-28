@@ -1,5 +1,7 @@
 #include "executor_realisation.h"
 
+using namespace lim_exec;
+
 ExecutorRealisation::ExecutorRealisation(int id, TasksPool & pool) : Executor(id, pool), cLog(Executor::cLog, "ExecutorRealisation") {
 }
 

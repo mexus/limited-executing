@@ -3,15 +3,15 @@
 
 #include "../../main/executor/executor.h"
 
-class ExecutorRealisation : public Executor {
+class ExecutorRealisation : public lim_exec::Executor {
 public:
-        ExecutorRealisation(int id, TasksPool &);
+        ExecutorRealisation(int id, lim_exec::TasksPool &);
         virtual ~ExecutorRealisation();
         
 protected:
         logxx::Log cLog;
 
-        virtual bool RunTask(const uniqueTask&);
+        virtual bool RunTask(const lim_exec::uniqueTask&);
 };
 
 #endif	/* EXECUTOR_REALISATION_H */
