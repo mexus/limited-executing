@@ -1,5 +1,5 @@
-#ifndef EXECUTORS_POOL_H
-#define	EXECUTORS_POOL_H
+#ifndef LIM_EXEC_EXECUTORS_POOL_H
+#define	LIM_EXEC_EXECUTORS_POOL_H
 
 #include "../logxx/logxx.h"
 #include "executor.h"
@@ -29,5 +29,5 @@ namespace lim_exec {
 
 #include "executors_pool.tcc"
 
-#endif	/* EXECUTORS_POOL_H */
+#endif	/* LIM_EXEC_EXECUTORS_POOL_H */
 

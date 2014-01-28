@@ -1,5 +1,5 @@
-#ifndef SERVER_H
-#define	SERVER_H
+#ifndef LIM_EXEC_SERVER_H
+#define	LIM_EXEC_SERVER_H
 
 #include <mutex>
 #include "../logxx/logxx.h"
@@ -28,5 +28,5 @@ namespace lim_exec {
         
 } //namespace lim_exec
 
-#endif	/* SERVER_H */
+#endif	/* LIM_EXEC_SERVER_H */
 

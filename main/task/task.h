@@ -1,5 +1,5 @@
-#ifndef TASK_H
-#define	TASK_H
+#ifndef LIM_EXEC_TASK_H
+#define	LIM_EXEC_TASK_H
 
 #include "../server/server.h"
 
@@ -23,4 +23,4 @@ namespace lim_exec {
         
 } //namespace lim_exec
 
-#endif	/* TASK_H */
+#endif	/* LIM_EXEC_TASK_H */

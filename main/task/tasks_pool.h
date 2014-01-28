@@ -1,5 +1,5 @@
-#ifndef TASKS_POOL_H
-#define	TASKS_POOL_H
+#ifndef LIM_EXEC_TASKS_POOL_H
+#define	LIM_EXEC_TASKS_POOL_H
 
 #include "../logxx/logxx.h"
 #include "task.h"
@@ -27,5 +27,5 @@ namespace lim_exec {
         
 } //namespace lim_exec
 
-#endif	/* TASKS_POOL_H */
+#endif	/* LIM_EXEC_TASKS_POOL_H */
 

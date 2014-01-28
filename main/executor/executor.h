@@ -1,5 +1,5 @@
-#ifndef EXECUTOR_H
-#define	EXECUTOR_H
+#ifndef LIM_EXEC_EXECUTOR_H
+#define	LIM_EXEC_EXECUTOR_H
 
 #include "../logxx/logxx.h"
 #include "../task/tasks_pool.h"
@@ -23,5 +23,5 @@ namespace lim_exec {
         };
 } //namespace lim_exec
 
-#endif	/* EXECUTOR_H */
+#endif	/* LIM_EXEC_EXECUTOR_H */
 
