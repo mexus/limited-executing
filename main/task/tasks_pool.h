@@ -11,6 +11,7 @@ public:
         virtual ~TasksPool();
         
         uniqueTask GetTask();
+        void TaskDone(uniqueTask &&, bool ok);
         bool LoadTasks();
         bool IsEmpty();
         
