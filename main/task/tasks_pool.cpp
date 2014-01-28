@@ -10,8 +10,13 @@ namespace lim_exec {
         TasksPool::~TasksPool() {
         }
 
+	void TasksPool::GetTaskPrologue(){
+	}
+
         uniqueTask TasksPool::GetTask() {
+		S_LOG("GetTask");
                 std::lock_guard<std::mutex> lg(dataLock);
+		GetTaskPrologue();
                 for (auto it = scheduledTasks.begin(); it != scheduledTasks.end(); ++it){
                         if ((*it)->TryOccupyServer()){
                                 uniqueTask task = std::move(*it);

@@ -22,6 +22,7 @@ namespace lim_exec {
                 std::vector<uniqueTask> scheduledTasks;
                 std::mutex dataLock;
 
+		virtual void GetTaskPrologue();
                 virtual bool PopulateTasks() = 0;
         };
         
