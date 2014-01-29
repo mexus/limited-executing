@@ -4,7 +4,7 @@
 #include "../../main/task/task.h"
 #include "../../main/threadxx/threadxx.h"
 
-class PrimitiveExecutor : public Thread {
+class PrimitiveExecutor : public threadxx::Thread {
 public:
         PrimitiveExecutor(lim_exec::uniqueTask &&task);
         virtual ~PrimitiveExecutor();

@@ -7,7 +7,7 @@
 
 namespace lim_exec {
 
-        class Executor : public Thread {
+        class Executor : public threadxx::Thread {
         public:
                 Executor(int id, TasksPool &);
                 virtual ~Executor();
