@@ -2,6 +2,7 @@
 #define	LIM_EXEC_SERVER_H
 
 #include <mutex>
+#include <memory>
 #include "../logxx/logxx.h"
 
 namespace lim_exec {
@@ -25,6 +26,8 @@ namespace lim_exec {
                 std::mutex access;
                 logxx::Log cLog;
         };
+
+	typedef std::shared_ptr<Server> SharedServer;
         
 } //namespace lim_exec
 

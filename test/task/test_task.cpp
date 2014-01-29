@@ -13,7 +13,7 @@ TestTask::~TestTask() {
 bool TestTask::Tests() {
         S_LOG("RunTests");
         
-        std::shared_ptr<Server> s1(new Server(2, 1));
+        SharedServer s1(new Server(2, 1));
         std::shared_ptr<Task> t1(new Task(1, s1));
         
         if (!t1->TryOccupyServer()){

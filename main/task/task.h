@@ -7,7 +7,7 @@ namespace lim_exec {
 
         class Task {
         public:
-                Task(int id, const std::shared_ptr<Server> &);
+                Task(int id, const SharedServer &);
                 virtual ~Task();
 
                 bool TryOccupyServer();
@@ -15,7 +15,7 @@ namespace lim_exec {
                 const int id;
         protected:
                 bool serverOccupied = false;
-                std::shared_ptr<Server> server;
+                SharedServer server;
                 logxx::Log cLog;
         };
 

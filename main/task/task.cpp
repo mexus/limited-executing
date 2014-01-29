@@ -2,7 +2,7 @@
 
 namespace lim_exec {
 
-        Task::Task(int id, const std::shared_ptr<Server>& s) : id(id), server(s), cLog("Task #" + std::to_string(id)) {
+        Task::Task(int id, const SharedServer& s) : id(id), server(s), cLog("Task #" + std::to_string(id)) {
         }
 
         Task::~Task() {
